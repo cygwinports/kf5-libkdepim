@@ -1,0 +1,40 @@
+inherit kf5
+
+NAME="kf5-libkdepim"
+VERSION=17.12.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE PIM library"
+
+PKG_NAMES="libKF5Libkdepim5 libKF5Libkdepim-devel libKF5LibkdepimAkonadi5 libKF5LibkdepimAkonadi-devel"
+libKF5Libkdepim5_CONTENTS="
+	etc/xdg/libkdepim.*
+	usr/bin/cygKF5Libkdepim-5.dll
+	usr/lib/qt5/plugins/kcm_ldap.dll
+	usr/share/doc/${NAME}
+	usr/share/kdepimwidgets/
+	usr/share/kservices5/kcmldap.desktop
+	usr/share/locale/*/LC_MESSAGES/libkdepim.mo
+"
+libKF5LibkdepimAkonadi5_CONTENTS="
+	usr/bin/cygKF5LibkdepimAkonadi-5.dll
+"
+libKF5Libkdepim_devel_CONTENTS="
+	usr/include/KF5/[Ll]ibkdepim/
+	usr/include/KF5/libkdepim_version.h
+	usr/lib/cmake/KF5Libkdepim/
+	usr/lib/cmake/MailTransportDBusService/
+	usr/lib/libKF5Libkdepim.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_Libkdepim.pri
+	usr/lib/qt5/plugins/designer/kdepimwidgets.dll
+	usr/share/dbus-1/interfaces/org.kde.addressbook.service.xml
+	usr/share/dbus-1/interfaces/org.kde.mailtransport.service.xml
+"
+libKF5LibkdepimAkonadi_devel_CONTENTS="
+	usr/include/KF5/[Ll]ibkdepim[Aa]konadi/
+	usr/include/KF5/libkdepimakonadi_version.h
+	usr/lib/cmake/KF5LibkdepimAkonadi/
+	usr/lib/libKF5LibkdepimAkonadi.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_LibkdepimAkonadi.pri
+	usr/lib/qt5/plugins/designer/kdepimakonadiwidgets.dll
+"
